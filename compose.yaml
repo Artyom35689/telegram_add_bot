@@ -1,0 +1,10 @@
+services:
+  sqlite:
+    image: nouchka/sqlite3:latest
+    stdin_open: true
+    tty: true
+  tg-bot:
+    build:
+      context: ./
+    depends_on:
+      - sqlite
