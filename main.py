@@ -45,11 +45,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         session.add(new_user)
         session.commit()
-        await update.message.reply_text("Добро пожаловать!")
+        await update.message.reply_text("Здравствуйте! Спасибо за проявление интереса к нашему продукту! Совсем скоро он будет работать :)")
         logging.info(f"Новый пользователь: {user.id}")
     except IntegrityError:
         session.rollback()
-        await update.message.reply_text("С возвращением!")
+        await update.message.reply_text("С возвращением! Пока ещё не готово :)")
     finally:
         session.close()
 
