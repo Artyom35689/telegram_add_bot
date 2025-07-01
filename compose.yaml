@@ -1,6 +1,6 @@
 services:
   sqlite:
-    image: nouchka/sqlite3:latest
+    image: keinos/sqlite3:latest
     stdin_open: true
     tty: true
   tg-bot:
